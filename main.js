@@ -1,7 +1,7 @@
 // Print to Dom Function
 const printToDom = (stringToPrint, divId) => {
     const selectedDiv = document.getElementById(divId);
-    selectedDiv.innerHTML = stringToPrint;
+    selectedDiv.innerHTML += stringToPrint;
 };
 
 // Variable to connect my final output into the DOM
@@ -38,14 +38,10 @@ const greek = {
     fright: "τρομάρα"
 };
 
-const dictionary = {
-    bulgarian, icelandic, greek
-};
-
 // Define buttons
-const buttonBulgarian = document.getElementById(bul);
-const buttonIcelandic = document.getElementById(ice);
-const buttonGreek = document.getElementById(gre);
+const buttonBulgarian = document.getElementById('bul');
+const buttonIcelandic = document.getElementById('ice');
+const buttonGreek = document.getElementById('gre');
 
 //Define value from textarea field, and turn it into an array.
 const inputValue = () => {
@@ -55,17 +51,32 @@ const inputValue = () => {
     return toTranslateArray;
 };
 
-// Function to translate
+// Translation functions
 const bulgarianTranslator = () => {
     const words = inputValue();
     for (i=0; i < words.length; i++) {
-     // I need to put something here that will see go through my array, find the index that matches,
-     // and return that value as 'finalOutput'. 
+     finalOutput = (bulgarian[words[i]]);
+    }
+    printToDom(finalOutput, "translated-text");
+};
+
+const icelandicTranslator = () => {
+    const words = inputValue();
+    for (i=0; i < words.length; i++) {
+     finalOutput = (icelandic[words[i]]);
+    }
+    printToDom(finalOutput, "translated-text");
+};
+
+const greekTranslator = () => {
+    const words = inputValue();
+    for (i=0; i < words.length; i++) {
+     finalOutput = (greek[words[i]]);
     }
     printToDom(finalOutput, "translated-text");
 };
 
 // // Button event listeners
 buttonBulgarian.addEventListener("click", bulgarianTranslator);
-// buttonIcelandic.addEventListener("click", icelandicTranslator);
-// buttonGreek.addEventListener("click", greekTranslator);
+buttonIcelandic.addEventListener("click", icelandicTranslator);
+buttonGreek.addEventListener("click", greekTranslator);
