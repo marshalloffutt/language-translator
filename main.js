@@ -1,13 +1,13 @@
 console.log('Hello world');
 
-let lang = {
-    happy: ["щастлив", "hamingjusöm", "ευτυχισμένος"],
-    halloween: ["Хелоуин", "Hrekkjavaka", "Απόκριες"],
-    ghost: ["призрак", "draugur", "φάντασμα"],
-    witch: ["вещица", "norn", "μάγισσα"],
-    spooky: ["зловещ", "skuggalegt", "στοιχειωμένος"],
-    haunting: ["натрапчива", "ásækja", "στέκι"],
-    fright: ["уплаха", "ótti", "τρομάρα"]
+let dictionary = {
+    happy: ["happy", "щастлив", "hamingjusöm", "ευτυχισμένος"],
+    halloween: ["halloween", "Хелоуин", "Hrekkjavaka", "Απόκριες"],
+    ghost: ["ghost", "призрак", "draugur", "φάντασμα"],
+    witch: ["witch", "вещица", "norn", "μάγισσα"],
+    spooky: ["spooky", "зловещ", "skuggalegt", "στοιχειωμένος"],
+    haunt: ["haunt", "натрапчива", "ásækja", "στέκι"],
+    fright: ["fright", "уплаха", "ótti", "τρομάρα"]
 }
 
 
