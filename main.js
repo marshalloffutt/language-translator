@@ -1,5 +1,10 @@
-console.log('Hello world');
+// Print to Dom Function
+const printToDom = (stringToPrint, divId) => {
+    const selectedDiv = document.getElementById(divId);
+    selectedDiv.innerHTML = stringToPrint;
+};
 
+// Dictionary object
 let dictionary = {
     happy: ["happy", "щастлив", "hamingjusöm", "ευτυχισμένος"],
     halloween: ["halloween", "Хелоуин", "Hrekkjavaka", "Απόκριες"],
