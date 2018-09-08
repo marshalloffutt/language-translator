@@ -1,3 +1,5 @@
+console.log('Hello world');
+
 let lang = {
     happy: ["щастлив", "hamingjusöm", "ευτυχισμένος"],
     halloween: ["Хелоуин", "Hrekkjavaka", "Απόκριες"],
