@@ -4,45 +4,68 @@ const printToDom = (stringToPrint, divId) => {
     selectedDiv.innerHTML = stringToPrint;
 };
 
-// Dictionary object
-let dictionary = {
-    happy: ["happy", "щастлив", "hamingjusöm", "ευτυχισμένος"],
-    halloween: ["halloween", "Хелоуин", "Hrekkjavaka", "Απόκριες"],
-    ghost: ["ghost", "призрак", "draugur", "φάντασμα"],
-    witch: ["witch", "вещица", "norn", "μάγισσα"],
-    spooky: ["spooky", "зловещ", "skuggalegt", "στοιχειωμένος"],
-    haunt: ["haunt", "натрапчива", "ásækja", "στέκι"],
-    fright: ["fright", "уплаха", "ótti", "τρομάρα"]
-}
+// Variable to connect my final output into the DOM
+let finalOutput;
 
+// Objects for each language
+const bulgarian = {
+    happy: "щастлив", 
+    halloween: "Хелоуин",
+    ghost: "призрак",
+    witch: "вещица",
+    spooky: "зловещ",
+    haunt: "натрапчива",
+    fright: "уплаха"
+};
 
-//This way seems too long. I will keep it for now in case I want to return to it, but I will be using the cleaner one.
-// let bulgarian = {
-//     happy: "щастлив", 
-//     halloween: "Хелоуин",
-//     ghost: "призрак",
-//     witch: "вещица",
-//     spooky: "зловещ",
-//     haunting: "натрапчива",
-//     fright: "уплаха"
-// }
+const icelandic = {
+    happy: "hamingjusöm", 
+    halloween: "Hrekkjavaka",
+    ghost: "draugur",
+    witch: "norn",
+    spooky: "skuggalegt",
+    haunt: "ásækja",
+    fright: "ótti"
+};
 
-// let icelandic = {
-//     happy: "hamingjusöm", 
-//     halloween: "Hrekkjavaka",
-//     ghost: "draugur",
-//     witch: "norn",
-//     spooky: "skuggalegt",
-//     haunting: "ásækja",
-//     fright: "ótti"
-// }
+const greek = {
+    happy: "ευτυχισμένος", 
+    halloween: "Απόκριες",
+    ghost: "φάντασμα",
+    witch: "μάγισσα",
+    spooky: "στοιχειωμένος",
+    haunt: "στέκι",
+    fright: "τρομάρα"
+};
 
-// let greek = {
-//     happy: "ευτυχισμένος", 
-//     halloween: "Απόκριες",
-//     ghost: "φάντασμα",
-//     witch: "μάγισσα",
-//     spooky: "στοιχειωμένος",
-//     haunting: "στέκι",
-//     fright: "τρομάρα"
-// }
+const dictionary = {
+    bulgarian, icelandic, greek
+};
+
+// Define buttons
+const buttonBulgarian = document.getElementById(bul);
+const buttonIcelandic = document.getElementById(ice);
+const buttonGreek = document.getElementById(gre);
+
+//Define value from textarea field, and turn it into an array.
+const inputValue = () => {
+    let toTranslate = document.getElementById('input-field').value.toLowerCase();
+    let toTranslateArray = toTranslate.split(' ');
+    console.log(toTranslateArray);
+    return toTranslateArray;
+};
+
+// Function to translate
+const bulgarianTranslator = () => {
+    const words = inputValue();
+    for (i=0; i < words.length; i++) {
+     // I need to put something here that will see go through my array, find the index that matches,
+     // and return that value as 'finalOutput'. 
+    }
+    printToDom(finalOutput, "translated-text");
+};
+
+// // Button event listeners
+buttonBulgarian.addEventListener("click", bulgarianTranslator);
+// buttonIcelandic.addEventListener("click", icelandicTranslator);
+// buttonGreek.addEventListener("click", greekTranslator);
