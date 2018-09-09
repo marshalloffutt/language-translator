@@ -80,7 +80,7 @@ const greekTranslator = () => {
 const randomTranslator = () => {
     let randomizer = Math.floor((Math.random() * 3) + 1);
     if(randomizer === 1) {
-        greekTranslator(inputValue);
+        bulgarianTranslator(inputValue);
     } else if(randomizer === 2) {
         icelandicTranslator(inputValue);
     } else if(randomizer === 3){
