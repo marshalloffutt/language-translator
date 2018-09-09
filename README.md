@@ -20,5 +20,5 @@ localhost: 9999
 ```
 * Type a Halloween-ish word into the input field.
 * Select a language to translate the word into by selecting the corresponding button.
-* OR, click the I'm Feeling Lucky bottn.
+* OR, click the I'm Feeling Lucky button.
 * Observe the results. :ghost:
