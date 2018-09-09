@@ -1,0 +1,31 @@
+body {
+    background-color: #222;
+    color: orange;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#header > h1 {
+    font-family: 'Creepster', cursive;
+    font-size: 3em;
+}
+
+#header > h3 {
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
+#translated-text {
+    color: red;
+    font-size: 2em;
+}
+
+#footer {
+    text-align: center;
+    color: red;
+}
