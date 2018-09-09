@@ -42,6 +42,7 @@ const greek = {
 const buttonBulgarian = document.getElementById('bul');
 const buttonIcelandic = document.getElementById('ice');
 const buttonGreek = document.getElementById('gre');
+const buttonLucky = document.getElementById('luc');
 
 //Define value from textarea field, and turn it into an array.
 const inputValue = () => {
@@ -76,7 +77,19 @@ const greekTranslator = () => {
     printToDom(finalOutput, "translated-text");
 };
 
+const randomTranslator = () => {
+    let randomizer = Math.floor((Math.random() * 3) + 1);
+    if(randomizer === 1) {
+        greekTranslator(inputValue);
+    } else if(randomizer === 2) {
+        icelandicTranslator(inputValue);
+    } else if(randomizer === 3){
+        greekTranslator(inputValue);
+    }
+};
+
 // // Button event listeners
 buttonBulgarian.addEventListener("click", bulgarianTranslator);
 buttonIcelandic.addEventListener("click", icelandicTranslator);
 buttonGreek.addEventListener("click", greekTranslator);
+buttonLucky.addEventListener("click", randomTranslator);
