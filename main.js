@@ -48,7 +48,6 @@ const buttonLucky = document.getElementById('luc');
 const inputValue = () => {
     let toTranslate = document.getElementById('input-field').value.toLowerCase();
     let toTranslateArray = toTranslate.split(' ');
-    console.log(toTranslateArray);
     return toTranslateArray;
 };
 
