@@ -52,6 +52,12 @@ const inputValue = () => {
     return toTranslateArray;
 };
 
+// Make it talk
+const itSpeaks = () => {
+    let readTheWords = new SpeechSynthesisUtterance(finalOutput);
+    window.speechSynthesis.speak(readTheWords);
+};
+
 // Translation functions
 const bulgarianTranslator = () => {
     const words = inputValue();
@@ -59,6 +65,7 @@ const bulgarianTranslator = () => {
      finalOutput = (bulgarian[words[i]]);
     }
     printToDom(finalOutput, "translated-text");
+    itSpeaks(finalOutput);
 };
 
 const icelandicTranslator = () => {
@@ -67,6 +74,7 @@ const icelandicTranslator = () => {
      finalOutput = (icelandic[words[i]]);
     }
     printToDom(finalOutput, "translated-text");
+    itSpeaks(finalOutput);
 };
 
 const greekTranslator = () => {
@@ -75,6 +83,7 @@ const greekTranslator = () => {
      finalOutput = (greek[words[i]]);
     }
     printToDom(finalOutput, "translated-text");
+    itSpeaks(finalOutput);
 };
 
 const randomTranslator = () => {
@@ -88,7 +97,7 @@ const randomTranslator = () => {
     }
 };
 
-// // Button event listeners
+// Button event listeners
 buttonBulgarian.addEventListener("click", bulgarianTranslator);
 buttonIcelandic.addEventListener("click", icelandicTranslator);
 buttonGreek.addEventListener("click", greekTranslator);
