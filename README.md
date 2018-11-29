@@ -1,6 +1,6 @@
 # Language Translator for a Halloween Card
 
-This project is an exploration of javascript functions. We play around with arrays, for loops, and conditional statements to build a bad translator app for a holiday card.
+This is a very limited language translator app, where the user can type Halloween-ish words into the input field, and the app will translage those words into Bulgarian, Greek, or Icelandic. This project is an exploration of JavaScript functions using arrays, for loops, and conditional statements.
 
 ## Screenshots
 ![main screen shot](./screenshots/lang.png)
@@ -18,7 +18,3 @@ hs -p 9999
 ```
 localhost: 9999
 ```
-* Type a Halloween-ish word into the input field.
-* Select a language to translate the word into by selecting the corresponding button.
-* OR, click the I'm Feeling Lucky button.
-* Observe the results. :ghost:
